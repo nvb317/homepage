@@ -29,11 +29,11 @@ export default class Game extends Phaser.Scene
     update (){
         if (this.cursor.left.isDown)
         {
-            this.player.velocity -= 30;
+            this.player.velocity -= 20;
         }
         if (this.cursor.right.isDown)
         {
-            this.player.velocity += 30;
+            this.player.velocity += 20;
         }
         this.player.setVelocityX(this.player.velocity);
         this.player.velocity *= 0.95;
