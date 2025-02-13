@@ -13,6 +13,6 @@ export default class Preloader extends Phaser.Scene
         this.loadText.setStroke('#203c5b', 6);
         this.loadText.setShadow(2, 2, '#2d2d2d', 4, true, false);
         this.load.setPath('../assets');
-        this.load('ashwanth.png');
+        this.load.image('ashwanth');
     }
 }
