@@ -4,10 +4,9 @@ const config = {
     type: Phaser.AUTO,
     backgroundColor: '#333333',
     scene: [Preloader],
-    parent: 'catch',
     scale: {
         mode: Phaser.Scale.FIT,
-        parent: 'phaser-example',
+        parent: 'catch',
         autoCenter: Phaser.Scale.CENTER_BOTH,
         width: 1024,
         height: 768
