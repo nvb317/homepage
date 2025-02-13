@@ -15,8 +15,9 @@ export default class Game extends Phaser.Scene
 
     create() {
         this.player = new Player(this,512,670,"ihangry");
+        this.player.setScale(0.6);
         this.item = new Items(this,512,0,"spacey");
-        this.item.setScale(0.1)
+        this.item.setScale(0.06)
         this.player.setGravityY(-200);
         this.player.setCollideWorldBounds(true);
         this.player.setBounce(0);
