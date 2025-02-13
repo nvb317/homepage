@@ -1,5 +1,5 @@
 alert("ready");
-import Preloader from './preloader.js';
+import {Preloader} from './preloader.js';
 
 const config = {
     type: Phaser.AUTO,
