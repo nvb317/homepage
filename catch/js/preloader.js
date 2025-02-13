@@ -13,4 +13,19 @@ export default class Preloader extends Phaser.Scene
         this.load.setPath('./assets');
         this.load.image(['spacey','ihangry']);
     }
+    create() {
+        if (this.sound.locked) {
+            this.loadText.setText('Click to Start');
+    
+            this.input.once('pointerdown', () => {
+    
+            this.scene.start('Game');
+    
+            });
+        }
+        else
+        {
+            this.scene.start('Game');
+        }
+    }
 }
