@@ -25,7 +25,8 @@ export default class Game extends Phaser.Scene
             key: 'spacey',
             repeat: 3,
         });
-
+        this.item.setScaleXY(0.06,0.06);
+        
         this.cursor = this.input.keyboard.createCursorKeys();
         this.scoretext = this.add.text(20, 20, 'Score: 0', { fontFamily: 'Arial', fontSize: 40, color: '#e3f2ed' });
         this.physics.add.overlap(this.player, this.item, this.collect,null, this);
