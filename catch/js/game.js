@@ -23,10 +23,9 @@ export default class Game extends Phaser.Scene
         
         this.item = this.physics.add.group({
             key: 'spacey',
+            setScale: { x: 0.06, y: 0.06},
             repeat: 3,
-        });
-        this.item.setScaleXY(0.06,0.06);
-        
+        });        
         this.cursor = this.input.keyboard.createCursorKeys();
         this.scoretext = this.add.text(20, 20, 'Score: 0', { fontFamily: 'Arial', fontSize: 40, color: '#e3f2ed' });
         this.physics.add.overlap(this.player, this.item, this.collect,null, this);
@@ -46,7 +45,7 @@ export default class Game extends Phaser.Scene
         this.item.children.iterate(child =>
         {
             if(child.y > 700) {
-                child.y = -10;
+                child.y = Math.random() * -500;
                 child.x = Math.random() * 1000;
                 child.setVelocityY(0);
             }
@@ -57,7 +56,7 @@ export default class Game extends Phaser.Scene
         this.score += 1;
         this.scoretext.setText('Score: ' + this.score);
         
-        item.y = -10;
+        item.y = Math.random() * -500;
         item.x = Math.random() * 1000;
         item.setVelocityY(0);
     }
