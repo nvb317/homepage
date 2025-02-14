@@ -24,7 +24,7 @@ export default class Game extends Phaser.Scene
         this.item = this.physics.add.group({
             key: 'spacey',
             setScale: { x: 0.06, y: 0.06},
-            repeat: 3,
+            repeat: 2,
         });        
         this.cursor = this.input.keyboard.createCursorKeys();
         this.scoretext = this.add.text(20, 20, 'Score: 0', { fontFamily: 'Arial', fontSize: 40, color: '#e3f2ed' });
